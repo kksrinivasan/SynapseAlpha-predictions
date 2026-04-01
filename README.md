@@ -1,2 +1,128 @@
-# SynapseAlpha-predictions
- Immutable weekly stock predictions from SynapseAlpha's self-evolving ranking engine. S&amp;P 500 stocks scored   across ~120 parameters. Every prediction published BEFORE outcomes are known. No edits, no deletions, no   backdating. Git history is the proof.
+# SynapseAlpha Predictions
+
+**Immutable, forward-looking stock predictions published before outcomes are known.**
+
+This repository is the tamper-proof public record of every weekly prediction made by [SynapseAlpha](https://synapsealpha.ie), a self-evolving stock ranking engine. Every prediction is committed here *before* the outcome period begins. No edits. No deletions. No backdating. Git history is the proof.
+
+---
+
+## What This Is
+
+Every Sunday, SynapseAlpha scores the entire S&P 500 (excluding financials in shadow mode) across ~120 calibrated parameters and publishes the **top 10 stocks** most likely to outperform their sector over the next 12 months.
+
+Each weekly edition is committed as a JSON file containing:
+- The 10 selected stocks with ticker, sector, decision tier, confidence level, and price at pick
+- The model version and scoring date
+- A SHA-256 hash of the prediction data for integrity verification
+
+## Why This Exists
+
+Most stock prediction services show you backtests — historical simulations that can be cherry-picked, curve-fitted, or outright fabricated. **SynapseAlpha does the opposite:**
+
+1. **Predictions are published in advance** — before anyone knows the outcome
+2. **Every prediction is permanently recorded** — in this public git repository with immutable commit history
+3. **Every outcome is tracked** — at 3-month, 6-month, and 12-month checkpoints against sector-relative returns
+4. **Nothing is hidden** — wrong calls stay visible forever, right next to the correct ones
+
+This is the standard that quantitative prediction should be held to.
+
+## How It Works
+
+| Step | What Happens |
+|------|-------------|
+| **Sunday 2 AM** | All S&P 500 stocks are scored using ~120 calibrated parameters across 8 signal groups |
+| **Sunday morning** | Top 10 stocks selected by score, published as an immutable weekly edition |
+| **Same day** | Prediction JSON committed to this repository with timestamp |
+| **3 months later** | Automatic review: did each pick outperform its sector? |
+| **6 months later** | Mid-point review with sector-relative returns |
+| **12 months later** | Primary review — the main benchmark for system success |
+
+## Prediction Format
+
+Each file in `editions/` follows this structure:
+
+```json
+{
+  "edition_id": "week-2026-W14",
+  "edition_date": "2026-04-06",
+  "scan_date": "2026-04-04",
+  "model_version": "v1.2-financials-calibrated",
+  "universe_size": 564,
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "AAPL",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 185.50,
+      "score": 78.5
+    }
+  ],
+  "sha256": "a1b2c3d4..."
+}
+```
+
+## How to Verify
+
+**Verify no prediction was changed after the fact:**
+```bash
+git log --oneline editions/
+# Every commit has a timestamp and SHA — the chain is immutable
+```
+
+**Verify a specific prediction's integrity:**
+```bash
+# The sha256 field in each JSON is computed from the picks array
+# Recompute it yourself:
+python3 -c "
+import json, hashlib
+with open('editions/week-2026-W14.json') as f:
+    data = json.load(f)
+picks_str = json.dumps(data['picks'], sort_keys=True)
+print(hashlib.sha256(picks_str.encode()).hexdigest())
+"
+# Should match the sha256 field in the file
+```
+
+**Verify commit timestamps haven't been forged:**
+```bash
+git log --format="%H %ai %s" editions/
+# Cross-reference with the GitHub API:
+# https://api.github.com/repos/kksrinivasan/SynapseAlpha-predictions/commits
+```
+
+## Success Criteria
+
+The system succeeds when:
+1. **Hit rate > 50%** — more picks outperform their sector than underperform
+2. **Ranking order holds** — Strong Buy picks outperform Buy, Buy outperforms Buy Small
+3. **Average excess return is positive** — across all picks and all editions
+
+We do not promise specific return numbers. We measure whether the ranking is correct and consistent.
+
+## Review Schedule
+
+| Edition | 3-Month Review | 6-Month Review | 12-Month Review |
+|---------|---------------|----------------|-----------------|
+| Week 14 (Apr 6, 2026) | Jul 2026 | Oct 2026 | Apr 2027 |
+
+Reviews are published in the `reviews/` directory as they become available.
+
+## About SynapseAlpha
+
+SynapseAlpha is a self-evolving stock ranking engine built by [GAMTPEDIA LIMITED](https://synapsealpha.ie) (Ireland). The engine uses ~120 calibrated parameters across 8 signal groups (valuation, momentum, growth, quality, financial health, earnings quality, mispricing, and event exposure), trained on 644,831+ historical data points. Parameters self-tune monthly through a governed calibration process with walk-forward validation.
+
+**This is not investment advice.** Rankings are generated by quantitative models that calculate probabilities, not certainties. Past performance is not indicative of future results. See [full disclaimer](https://synapsealpha.ie/disclaimer).
+
+## Repository Rules
+
+- **No force pushes** — branch protection enforced on `main`
+- **No deletions** — once committed, a prediction stays forever
+- **No edits** — each edition file is written once and never modified
+- **Automated commits only** — predictions are committed by the Sunday pipeline, not manually
+- **Public visibility** — anyone can clone, verify, and audit the full history
+
+---
+
+*First official edition: Sunday, April 6, 2026*
