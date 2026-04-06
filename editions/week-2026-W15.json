@@ -1,0 +1,101 @@
+{
+  "edition_id": "week-2026-W15",
+  "edition_date": "2026-04-06",
+  "scan_date": "2026-04-06",
+  "model_version": "v1.0",
+  "universe_size": 481,
+  "published_at": "2026-04-06T06:03:44.669458Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "INCY",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 95.93000030517578,
+      "score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "EQT",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 59.70000076293945,
+      "score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "CNX",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 38.709999084472656,
+      "score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "NEM",
+      "sector": "Basic Materials",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 114.05000305175781,
+      "score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "EXE",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 103.89,
+      "score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "DLTR",
+      "sector": "Consumer Defensive",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 108.44000244140625,
+      "score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "ROKU",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 97.66000366210938,
+      "score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "GILD",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 139.7100067138672,
+      "score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "BMY",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 59.599998474121094,
+      "score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 203.76,
+      "score": null
+    }
+  ],
+  "sha256": "97577bf838375e06ffde3400989dfda5025b308f8a0540e3f3f17ca11ad24dd7"
+}
