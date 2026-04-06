@@ -2,9 +2,9 @@
   "edition_id": "week-2026-W15",
   "edition_date": "2026-04-06",
   "scan_date": "2026-04-06",
-  "model_version": "v1.0",
+  "model_version": "v1.2-financials-calibrated",
   "universe_size": 481,
-  "published_at": "2026-04-06T06:03:44.669458Z",
+  "published_at": "2026-04-06T06:30:02.911248Z",
   "picks": [
     {
       "rank": 1,
@@ -13,7 +13,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 95.93000030517578,
-      "score": null
+      "score": 65.00999999999999
     },
     {
       "rank": 2,
@@ -22,7 +22,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 59.70000076293945,
-      "score": null
+      "score": 63.86
     },
     {
       "rank": 3,
@@ -31,7 +31,7 @@
       "decision": "Strong Buy",
       "confidence": "MEDIUM",
       "price_at_pick": 38.709999084472656,
-      "score": null
+      "score": 62.589999999999996
     },
     {
       "rank": 4,
@@ -40,7 +40,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 114.05000305175781,
-      "score": null
+      "score": 61.45
     },
     {
       "rank": 5,
@@ -49,7 +49,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 103.89,
-      "score": null
+      "score": 61.42
     },
     {
       "rank": 6,
@@ -58,7 +58,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 108.44000244140625,
-      "score": null
+      "score": 60.08
     },
     {
       "rank": 7,
@@ -67,7 +67,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 97.66000366210938,
-      "score": null
+      "score": 59.89
     },
     {
       "rank": 8,
@@ -76,7 +76,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 139.7100067138672,
-      "score": null
+      "score": 59.660000000000004
     },
     {
       "rank": 9,
@@ -85,7 +85,7 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 59.599998474121094,
-      "score": null
+      "score": 59.37
     },
     {
       "rank": 10,
@@ -94,8 +94,8 @@
       "decision": "Strong Buy",
       "confidence": "HIGH",
       "price_at_pick": 203.76,
-      "score": null
+      "score": 59.339999999999996
     }
   ],
-  "sha256": "97577bf838375e06ffde3400989dfda5025b308f8a0540e3f3f17ca11ad24dd7"
+  "sha256": "afbfdf4fe53d4df67b7171b7600105ae139427b75e86b1579a73635ab4b307a3"
 }
