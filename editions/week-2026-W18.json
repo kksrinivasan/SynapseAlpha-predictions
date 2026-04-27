@@ -1,0 +1,101 @@
+{
+  "edition_id": "week-2026-W18",
+  "edition_date": "2026-04-27",
+  "scan_date": "2026-04-27",
+  "model_version": "v2.0-simfin-calibrated",
+  "universe_size": 477,
+  "published_at": "2026-04-27T07:34:25.589407Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "FOXA",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 62.849998474121094,
+      "score": 86.54
+    },
+    {
+      "rank": 2,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 186.5,
+      "score": 86.27
+    },
+    {
+      "rank": 3,
+      "ticker": "DECK",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 108.52999877929688,
+      "score": 84.37
+    },
+    {
+      "rank": 4,
+      "ticker": "NEM",
+      "sector": "Basic Materials",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 120.69999694824219,
+      "score": 84.02
+    },
+    {
+      "rank": 5,
+      "ticker": "SUI",
+      "sector": "Real Estate",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 129.8300018310547,
+      "score": 82.84
+    },
+    {
+      "rank": 6,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 111.9000015258789,
+      "score": 82.49
+    },
+    {
+      "rank": 7,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 39.959999084472656,
+      "score": 82.16
+    },
+    {
+      "rank": 8,
+      "ticker": "JNJ",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 227.5,
+      "score": 82.03999999999999
+    },
+    {
+      "rank": 9,
+      "ticker": "CRH",
+      "sector": "Basic Materials",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 118.0,
+      "score": 81.83
+    },
+    {
+      "rank": 10,
+      "ticker": "FFIV",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 303.1600036621094,
+      "score": 81.81
+    }
+  ],
+  "sha256": "bf60a24e51f0c523dd532105137cdd2acc613982cb4f44bc537b07957e79bf1b"
+}
