@@ -1,0 +1,100 @@
+{
+  "edition_id": "week-2026-W19",
+  "edition_date": "2026-05-06",
+  "scan_date": "2026-05-06",
+  "model_version": "v2.0-simfin-calibrated",
+  "universe_size": 458,
+  "published_at": "2026-05-06T17:53:28.110155Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 186.94000244140625,
+      "score": 85.75
+    },
+    {
+      "rank": 2,
+      "ticker": "NEM",
+      "sector": "Basic Materials",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 109.01000213623047,
+      "score": 83.60000000000001
+    },
+    {
+      "rank": 3,
+      "ticker": "FOXA",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 62.22999954223633,
+      "score": 82.58
+    },
+    {
+      "rank": 4,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 113.1500015258789,
+      "score": 82.56
+    },
+    {
+      "rank": 5,
+      "ticker": "ZM",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 103.44000244140625,
+      "score": 82.04
+    },
+    {
+      "rank": 6,
+      "ticker": "JNJ",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 225.5500030517578,
+      "score": 81.98
+    },
+    {
+      "rank": 7,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 39.5099983215332,
+      "score": 81.89
+    },
+    {
+      "rank": 8,
+      "ticker": "FFIV",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 339.8999938964844,
+      "score": 81.67
+    },
+    {
+      "rank": 9,
+      "ticker": "CHRD",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 145.05999755859375,
+      "score": 81.19
+    },
+    {
+      "rank": 10,
+      "ticker": "GEV",
+      "sector": "Utilities",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 1062.949951171875,
+      "score": 80.98
+    }
+  ]
+}
