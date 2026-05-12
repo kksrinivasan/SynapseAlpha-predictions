@@ -1,0 +1,100 @@
+{
+  "edition_id": "week-2026-W20",
+  "edition_date": "2026-05-11",
+  "scan_date": "2026-05-11",
+  "model_version": "v2.0-simfin-calibrated",
+  "universe_size": 468,
+  "published_at": "2026-05-12T09:53:34.027649Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 41.54999923706055,
+      "score": 64.96
+    },
+    {
+      "rank": 2,
+      "ticker": "FOXA",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 62.939998626708984,
+      "score": 63.5
+    },
+    {
+      "rank": 3,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 186.7899932861328,
+      "score": 62.7
+    },
+    {
+      "rank": 4,
+      "ticker": "NWSA",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 27.020000457763672,
+      "score": 61.1
+    },
+    {
+      "rank": 5,
+      "ticker": "YUM",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 153.88999938964844,
+      "score": 59.440000000000005
+    },
+    {
+      "rank": 6,
+      "ticker": "OKE",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 85.16000366210938,
+      "score": 59.24
+    },
+    {
+      "rank": 7,
+      "ticker": "NEM",
+      "sector": "Basic Materials",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 116.51000213623047,
+      "score": 58.83
+    },
+    {
+      "rank": 8,
+      "ticker": "MAS",
+      "sector": "Industrials",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 71.73999786376953,
+      "score": 58.730000000000004
+    },
+    {
+      "rank": 9,
+      "ticker": "CPAY",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 343.989990234375,
+      "score": 58.58
+    },
+    {
+      "rank": 10,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 111.37999725341797,
+      "score": 58.26
+    }
+  ]
+}
