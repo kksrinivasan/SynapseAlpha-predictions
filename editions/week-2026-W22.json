@@ -1,0 +1,100 @@
+{
+  "edition_id": "week-2026-W22",
+  "edition_date": "2026-05-25",
+  "scan_date": "2026-05-25",
+  "model_version": "v2.0-simfin-calibrated",
+  "universe_size": 455,
+  "published_at": "2026-05-25T14:47:25.295789Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "FOXA",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 63.97999954223633,
+      "score": 65.05
+    },
+    {
+      "rank": 2,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 191.5,
+      "score": 64.71000000000001
+    },
+    {
+      "rank": 3,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 38.04999923706055,
+      "score": 63.4
+    },
+    {
+      "rank": 4,
+      "ticker": "CPAY",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 347.8999938964844,
+      "score": 62.62
+    },
+    {
+      "rank": 5,
+      "ticker": "SUI",
+      "sector": "Real Estate",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 127.75,
+      "score": 62.39
+    },
+    {
+      "rank": 6,
+      "ticker": "OKE",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 94.02999877929688,
+      "score": 61.620000000000005
+    },
+    {
+      "rank": 7,
+      "ticker": "CVS",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 93.31999969482422,
+      "score": 61.06
+    },
+    {
+      "rank": 8,
+      "ticker": "CI",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 286.239990234375,
+      "score": 60.07
+    },
+    {
+      "rank": 9,
+      "ticker": "DTM",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 151.1199951171875,
+      "score": 60.03
+    },
+    {
+      "rank": 10,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 122.41000366210938,
+      "score": 59.9
+    }
+  ]
+}
