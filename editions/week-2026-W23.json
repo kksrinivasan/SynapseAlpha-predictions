@@ -1,0 +1,100 @@
+{
+  "edition_id": "week-2026-W23",
+  "edition_date": "2026-06-06",
+  "scan_date": "2026-06-06",
+  "model_version": "v2.0-simfin-calibrated",
+  "universe_size": 459,
+  "published_at": "2026-06-15T10:15:07.751883Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 41.279998779296875,
+      "score": 71.2
+    },
+    {
+      "rank": 2,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 203.49000549316406,
+      "score": 71.10000000000001
+    },
+    {
+      "rank": 3,
+      "ticker": "FOXA",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 66.88999938964844,
+      "score": 69.71
+    },
+    {
+      "rank": 4,
+      "ticker": "CPAY",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 347.45001220703125,
+      "score": 66.72999999999999
+    },
+    {
+      "rank": 5,
+      "ticker": "GEV",
+      "sector": "Utilities",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 933.6099853515625,
+      "score": 66.67
+    },
+    {
+      "rank": 6,
+      "ticker": "DECK",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 108.95999908447266,
+      "score": 65.83
+    },
+    {
+      "rank": 7,
+      "ticker": "OKE",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 88.25,
+      "score": 64.61
+    },
+    {
+      "rank": 8,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 120.79000091552734,
+      "score": 64.45
+    },
+    {
+      "rank": 9,
+      "ticker": "JNJ",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 232.77000427246094,
+      "score": 63.47
+    },
+    {
+      "rank": 10,
+      "ticker": "CROX",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 121.5199966430664,
+      "score": 63.25
+    }
+  ]
+}
