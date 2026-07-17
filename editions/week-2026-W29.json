@@ -1,0 +1,100 @@
+{
+  "edition_id": "week-2026-W29",
+  "edition_date": "2026-07-17",
+  "scan_date": "2026-07-17",
+  "model_version": "v2.0-simfin-calibrated",
+  "universe_size": 461,
+  "published_at": "2026-07-17T14:21:11.645320Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 44.77000045776367,
+      "score": 73.78
+    },
+    {
+      "rank": 2,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 127.62999725341797,
+      "score": 68.48
+    },
+    {
+      "rank": 3,
+      "ticker": "DECK",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 109.02999877929688,
+      "score": 68.14999999999999
+    },
+    {
+      "rank": 4,
+      "ticker": "DLTR",
+      "sector": "Consumer Defensive",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 128.4499969482422,
+      "score": 68.13
+    },
+    {
+      "rank": 5,
+      "ticker": "CPAY",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 371.80999755859375,
+      "score": 67.23
+    },
+    {
+      "rank": 6,
+      "ticker": "BMY",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 60.5099983215332,
+      "score": 67.22
+    },
+    {
+      "rank": 7,
+      "ticker": "OKE",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 93.0,
+      "score": 67.14
+    },
+    {
+      "rank": 8,
+      "ticker": "ADP",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 256.55999755859375,
+      "score": 66.34
+    },
+    {
+      "rank": 9,
+      "ticker": "JNJ",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 249.97000122070312,
+      "score": 66.09
+    },
+    {
+      "rank": 10,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 184.77999877929688,
+      "score": 65.98
+    }
+  ]
+}
