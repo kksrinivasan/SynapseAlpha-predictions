@@ -1,0 +1,100 @@
+{
+  "edition_id": "week-2026-W26",
+  "edition_date": "2026-06-24",
+  "scan_date": "2026-06-24",
+  "model_version": "v2.0-simfin-calibrated",
+  "universe_size": 458,
+  "published_at": "2026-07-17T09:56:25.902927Z",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "SW",
+      "sector": "Basic Materials",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 44.36000061035156,
+      "score": 74.78
+    },
+    {
+      "rank": 2,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 202.6999969482422,
+      "score": 74.36999999999999
+    },
+    {
+      "rank": 3,
+      "ticker": "GEV",
+      "sector": "Utilities",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 1045.655029296875,
+      "score": 69.57000000000001
+    },
+    {
+      "rank": 4,
+      "ticker": "DECK",
+      "sector": "Consumer Cyclical",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 104.36499786376953,
+      "score": 69.32000000000001
+    },
+    {
+      "rank": 5,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 118.68000030517578,
+      "score": 68.83
+    },
+    {
+      "rank": 6,
+      "ticker": "JNJ",
+      "sector": "Healthcare",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 237.63999938964844,
+      "score": 68.03999999999999
+    },
+    {
+      "rank": 7,
+      "ticker": "DLTR",
+      "sector": "Consumer Defensive",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 111.6500015258789,
+      "score": 67.68
+    },
+    {
+      "rank": 8,
+      "ticker": "OKE",
+      "sector": "Energy",
+      "decision": "Strong Buy",
+      "confidence": "MEDIUM",
+      "price_at_pick": 87.58000183105469,
+      "score": 67.44999999999999
+    },
+    {
+      "rank": 9,
+      "ticker": "NEM",
+      "sector": "Basic Materials",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 103.79000091552734,
+      "score": 67.34
+    },
+    {
+      "rank": 10,
+      "ticker": "CPAY",
+      "sector": "Technology",
+      "decision": "Strong Buy",
+      "confidence": "HIGH",
+      "price_at_pick": 339.5450134277344,
+      "score": 67.17
+    }
+  ]
+}
