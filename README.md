@@ -1,128 +1,114 @@
 # SynapseAlpha Predictions
 
-**Immutable, forward-looking stock predictions published before outcomes are known.**
+**An append-only public record of SynapseAlpha weekly stock selections.**
 
-This repository is the tamper-proof public record of every weekly prediction made by [SynapseAlpha](https://synapsealpha.ie), a self-evolving stock ranking engine. Every prediction is committed here *before* the outcome period begins. No edits. No deletions. No backdating. Git history is the proof.
+This repository records each published edition in Git so its contents,
+publication commit, and timing can be independently inspected. Historical
+files are never edited or deleted, including when a publication was late or a
+legacy file exposed a field that newer records omit.
 
----
+## Publication classes
 
-## What This Is
+- `forward_prediction`: published on its edition date and eligible for public
+  forward-performance reporting.
+- `historical_recovery`: published after its edition date to recover missing
+  history. It remains auditable but is never counted as forward evidence.
 
-Every Sunday, SynapseAlpha scores the entire S&P 500 (excluding financials in shadow mode) across ~120 calibrated parameters and publishes the **top 10 stocks** most likely to outperform their sector over the next 12 months.
+The authoritative classification of the 11 legacy files is
+[`legacy_publication_ledger.json`](legacy_publication_ledger.json). Weeks 23
+and 26 are historical recoveries. The other nine legacy records are classified
+as forward publications. A database-only Week 16 edition has no verified
+public Git artifact and is therefore not included in public results.
 
-Each weekly edition is committed as a JSON file containing:
-- The 10 selected stocks with ticker, sector, decision tier, confidence level, and price at pick
-- The model version and scoring date
-- A SHA-256 hash of the prediction data for integrity verification
+## Integrity note
 
-## Why This Exists
+The legacy edition files included a model `score` in each pick. That field is
+now treated as protected internal data. Removing it would rewrite the public
+evidence, so the original files remain unchanged and the exposure is recorded
+in the ledger. New records use an explicit allowlist and do not publish model
+scores, score breakdowns, or other internal analysis.
 
-Most stock prediction services show you backtests — historical simulations that can be cherry-picked, curve-fitted, or outright fabricated. **SynapseAlpha does the opposite:**
+New historical recoveries are written to `recoveries/`, while same-day forward
+records are written to `editions/`. Each successful publication is accepted by
+the application only after the exact JSON blob is verified on `origin/main`.
 
-1. **Predictions are published in advance** — before anyone knows the outcome
-2. **Every prediction is permanently recorded** — in this public git repository with immutable commit history
-3. **Every outcome is tracked** — at 3-month, 6-month, and 12-month checkpoints against sector-relative returns
-4. **Nothing is hidden** — wrong calls stay visible forever, right next to the correct ones
-
-This is the standard that quantitative prediction should be held to.
-
-## How It Works
-
-| Step | What Happens |
-|------|-------------|
-| **Sunday 2 AM** | All S&P 500 stocks are scored using ~120 calibrated parameters across 8 signal groups |
-| **Sunday morning** | Top 10 stocks selected by score, published as an immutable weekly edition |
-| **Same day** | Prediction JSON committed to this repository with timestamp |
-| **3 months later** | Automatic review: did each pick outperform its sector? |
-| **6 months later** | Mid-point review with sector-relative returns |
-| **12 months later** | Primary review — the main benchmark for system success |
-
-## Prediction Format
-
-Each file in `editions/` follows this structure:
+## Current record format
 
 ```json
 {
-  "edition_id": "week-2026-W14",
-  "edition_date": "2026-04-06",
-  "scan_date": "2026-04-04",
-  "model_version": "v1.2-financials-calibrated",
-  "universe_size": 564,
+  "edition_id": "week-2026-W30",
+  "edition_date": "2026-07-24",
+  "scan_date": "2026-07-24",
+  "universe_size": 461,
+  "published_at": "2026-07-24T12:00:00Z",
+  "record_type": "forward_prediction",
+  "forward_performance_eligible": true,
   "picks": [
     {
       "rank": 1,
       "ticker": "AAPL",
       "sector": "Technology",
-      "decision": "Strong Buy",
+      "decision": "Buy",
       "confidence": "HIGH",
-      "price_at_pick": 185.50,
-      "score": 78.5
+      "price_at_pick": 185.5,
+      "prediction_id": "exact-persisted-prediction-id"
     }
-  ],
-  "sha256": "a1b2c3d4..."
+  ]
 }
 ```
 
-## How to Verify
+## How to verify
 
-**Verify no prediction was changed after the fact:**
+Inspect the immutable history of edition paths:
+
 ```bash
-git log --oneline editions/
-# Every commit has a timestamp and SHA — the chain is immutable
+git log --format="%H %aI %s" -- editions/ recoveries/
 ```
 
-**Verify a specific prediction's integrity:**
+Recompute the canonical picks checksum used by the current publisher:
+
 ```bash
-# The sha256 field in each JSON is computed from the picks array
-# Recompute it yourself:
-python3 -c "
-import json, hashlib
-with open('editions/week-2026-W14.json') as f:
-    data = json.load(f)
-picks_str = json.dumps(data['picks'], sort_keys=True)
-print(hashlib.sha256(picks_str.encode()).hexdigest())
-"
-# Should match the sha256 field in the file
+python3 - <<'PY'
+import hashlib
+import json
+
+path = "editions/week-2026-W29.json"
+with open(path, encoding="utf-8") as handle:
+    picks = json.load(handle)["picks"]
+canonical = json.dumps(picks, sort_keys=True, separators=(",", ":")).encode()
+print(hashlib.sha256(canonical).hexdigest())
+PY
 ```
 
-**Verify commit timestamps haven't been forged:**
-```bash
-git log --format="%H %ai %s" editions/
-# Cross-reference with the GitHub API:
-# https://api.github.com/repos/kksrinivasan/SynapseAlpha-predictions/commits
-```
+For legacy files, compare the result with `picks_sha256` in the ledger and
+confirm `git log -1 --format=%H -- <path>` matches its `git_commit`. For new
+files, compare it with the `Picks-SHA256` trailer in the file's publication
+commit. The checksum is not embedded in the JSON, because an embedded checksum
+could be changed together with the file.
 
-## Success Criteria
+## Evaluation
 
-The system succeeds when:
-1. **Hit rate > 50%** — more picks outperform their sector than underperform
-2. **Ranking order holds** — Strong Buy picks outperform Buy, Buy outperforms Buy Small
-3. **Average excess return is positive** — across all picks and all editions
+Only `forward_prediction` records are eligible for the public scorecard.
+Selections are reviewed against sector-relative returns at defined horizons;
+recoveries and unverified database editions are excluded.
 
-We do not promise specific return numbers. We measure whether the ranking is correct and consistent.
+The system is evaluated on whether:
 
-## Review Schedule
+1. More than half of reviewed picks outperform their sector.
+2. Higher decision tiers outperform lower tiers.
+3. Average sector-relative return is positive.
 
-| Edition | 3-Month Review | 6-Month Review | 12-Month Review |
-|---------|---------------|----------------|-----------------|
-| Week 14 (Apr 6, 2026) | Jul 2026 | Oct 2026 | Apr 2027 |
+These rankings are model outputs, not investment advice. Past performance is
+not indicative of future results. See the
+[full disclaimer](https://synapsealpha.ie/disclaimer).
 
-Reviews are published in the `reviews/` directory as they become available.
+## Repository rules
 
-## About SynapseAlpha
+- No force pushes to `main`.
+- No edits or deletions of published edition files.
+- Every new publication targets one exact database edition.
+- Publication failures are loud and retryable.
+- A local file or database row is not public proof; verification on
+  `origin/main` is required.
 
-SynapseAlpha is a self-evolving stock ranking engine built by [GAMTPEDIA LIMITED](https://synapsealpha.ie) (Ireland). The engine uses ~120 calibrated parameters across 8 signal groups (valuation, momentum, growth, quality, financial health, earnings quality, mispricing, and event exposure), trained on 644,831+ historical data points. Parameters self-tune monthly through a governed calibration process with walk-forward validation.
-
-**This is not investment advice.** Rankings are generated by quantitative models that calculate probabilities, not certainties. Past performance is not indicative of future results. See [full disclaimer](https://synapsealpha.ie/disclaimer).
-
-## Repository Rules
-
-- **No force pushes** — branch protection enforced on `main`
-- **No deletions** — once committed, a prediction stays forever
-- **No edits** — each edition file is written once and never modified
-- **Automated commits only** — predictions are committed by the Sunday pipeline, not manually
-- **Public visibility** — anyone can clone, verify, and audit the full history
-
----
-
-*First official edition: Sunday, April 6, 2026*
+The first verified public edition is Week 15, published 6 April 2026.
