@@ -15,10 +15,11 @@ legacy file exposed a field that newer records omit.
   history. It remains auditable but is never counted as forward evidence.
 
 The authoritative classification of the 11 legacy files is
-[`legacy_publication_ledger.json`](legacy_publication_ledger.json). Weeks 23
-and 26 are historical recoveries. The other nine legacy records are classified
-as forward publications. A database-only Week 16 edition has no verified
-public Git artifact and is therefore not included in public results.
+[`legacy_publication_ledger.json`](legacy_publication_ledger.json). Only Weeks
+15, 18, 19, 22, and 29 were published on their recorded edition date and count
+as forward evidence. Weeks 17, 20, 21, 23, 24, and 26 are historical
+recoveries because their publication date was later. A database-only Week 16
+edition has no verified public Git artifact and is therefore excluded.
 
 ## Integrity note
 
@@ -81,10 +82,13 @@ PY
 ```
 
 For legacy files, compare the result with `picks_sha256` in the ledger and
-confirm `git log -1 --format=%H -- <path>` matches its `git_commit`. For new
-files, compare it with the `Picks-SHA256` trailer in the file's publication
-commit. The checksum is not embedded in the JSON, because an embedded checksum
-could be changed together with the file.
+confirm `git log -1 --format=%H -- <path>` matches its `git_commit`.
+`normalized_picks_sha256` covers the same picks after removing the retired
+legacy `score` field and keeping the six fields shared with the database; it is
+used only to prove that the database edition matches the Git evidence. For new
+files, compare the full public-picks checksum with the `Picks-SHA256` trailer
+in the publication commit. The checksum is not embedded in the JSON, because
+an embedded checksum could be changed together with the file.
 
 ## Evaluation
 
