@@ -1,0 +1,38 @@
+{
+  "edition_id": "week-2026-W31",
+  "edition_date": "2026-07-28",
+  "scan_date": "2026-07-28",
+  "universe_size": 554,
+  "published_at": "2026-07-28T04:26:08.999016Z",
+  "record_type": "forward_prediction",
+  "forward_performance_eligible": true,
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "GEV",
+      "sector": "Industrials",
+      "decision": "Buy Small",
+      "confidence": "MEDIUM",
+      "price_at_pick": 1031.18994140625,
+      "prediction_id": "GEV-2026-07-28-auto-53c589"
+    },
+    {
+      "rank": 2,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Buy Small",
+      "confidence": "MEDIUM",
+      "price_at_pick": 50.09000015258789,
+      "prediction_id": "SW-2026-07-28-auto-16d8ec"
+    },
+    {
+      "rank": 3,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 182.86000061035156,
+      "prediction_id": "TKO-2026-07-28-auto-c65b85"
+    }
+  ]
+}
