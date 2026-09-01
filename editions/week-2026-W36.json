@@ -1,0 +1,101 @@
+{
+  "edition_id": "week-2026-W36",
+  "edition_date": "2026-09-01",
+  "scan_date": "2026-09-01",
+  "universe_size": 554,
+  "published_at": "2026-09-01T14:15:58.430841Z",
+  "record_type": "forward_prediction",
+  "forward_performance_eligible": true,
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "SW",
+      "sector": "Consumer Cyclical",
+      "decision": "Buy Small",
+      "confidence": "MEDIUM",
+      "price_at_pick": 48.290000915527344,
+      "prediction_id": "SW-2026-09-01-auto-d1da7d"
+    },
+    {
+      "rank": 2,
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 186.2899932861328,
+      "prediction_id": "PLTR-2026-09-01-auto-74aa95"
+    },
+    {
+      "rank": 3,
+      "ticker": "GEV",
+      "sector": "Industrials",
+      "decision": "Buy Small",
+      "confidence": "MEDIUM",
+      "price_at_pick": 911.9299926757812,
+      "prediction_id": "GEV-2026-09-01-auto-4c25ca"
+    },
+    {
+      "rank": 4,
+      "ticker": "TKO",
+      "sector": "Communication Services",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 184.63999938964844,
+      "prediction_id": "TKO-2026-09-01-auto-e2d6ec"
+    },
+    {
+      "rank": 5,
+      "ticker": "CPAY",
+      "sector": "Technology",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 407.8800048828125,
+      "prediction_id": "CPAY-2026-09-01-auto-3260cc"
+    },
+    {
+      "rank": 6,
+      "ticker": "SOLV",
+      "sector": "Healthcare",
+      "decision": "Buy Small",
+      "confidence": "MEDIUM",
+      "price_at_pick": 91.12000274658203,
+      "prediction_id": "SOLV-2026-09-01-auto-bf714b"
+    },
+    {
+      "rank": 7,
+      "ticker": "CRM",
+      "sector": "Technology",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 257.5400085449219,
+      "prediction_id": "CRM-2026-09-01-auto-c44d4c"
+    },
+    {
+      "rank": 8,
+      "ticker": "FOXA",
+      "sector": "Communication Services",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 67.3499984741211,
+      "prediction_id": "FOXA-2026-09-01-auto-32e368"
+    },
+    {
+      "rank": 9,
+      "ticker": "NEM",
+      "sector": "Basic Materials",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 126.05999755859375,
+      "prediction_id": "NEM-2026-09-01-auto-f6d452"
+    },
+    {
+      "rank": 10,
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "decision": "Buy Small",
+      "confidence": "HIGH",
+      "price_at_pick": 148.35000610351562,
+      "prediction_id": "MRK-2026-09-01-auto-34ea5b"
+    }
+  ]
+}
